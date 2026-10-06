@@ -1,122 +1,133 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+      <header>
+        <nav>
+          <a href="#home">kass.works</a>
+
+          <div>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="home">
+          <p>Dog Walking • Pet Sitting • House Sitting</p>
+
+          <h1>Pet care you can actually relax about.</h1>
+
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Reliable, thoughtful care for pets and homes in London & Middlesex.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+          <a href="#services">View Services</a>
+          <a href="#contact">Get in Touch</a>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <section id="services">
+          <h2>What can I help with?</h2>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+          <article>
+            <h3>Dog Walking</h3>
+            <p>Regular walks tailored to your dog's routine and energy level.</p>
+          </article>
+
+          <article>
+            <h3>Drop-In Visits</h3>
+            <p>
+              Feeding, bathroom breaks, playtime and company while you're away.
+            </p>
+          </article>
+
+          <article>
+            <h3>Pet Sitting</h3>
+            <p>
+              Personal care that keeps your pet comfortable and their routine
+              familiar.
+            </p>
+          </article>
+
+          <article>
+            <h3>House Sitting</h3>
+            <p>
+              Care for your pets and home while you're away, all in one.
+            </p>
+          </article>
+        </section>
+
+        <section id="about">
+          <h2>Hi, I'm Kass.</h2>
+
+          <p>
+            I'm a London-area pet and house sitter focused on providing
+            dependable, thoughtful care while you're away.
+          </p>
+        </section>
+
+        <section id="why-kass">
+          <h2>Care you can count on.</h2>
+
+          <p>Reliable</p>
+          <p>Respectful</p>
+          <p>Detail-oriented</p>
+          <p>Great communication</p>
+        </section>
+
+        <section id="how-it-works">
+          <h2>How it works</h2>
+
+          <ol>
+            <li>Send an inquiry</li>
+            <li>We'll arrange a meet & greet</li>
+            <li>Confirm your booking</li>
+            <li>Relax — I've got it from here</li>
+          </ol>
+        </section>
+
+        <section id="service-area">
+          <h2>Service Area</h2>
+          <p>Serving London and surrounding Middlesex communities.</p>
+        </section>
+
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+
+          <h3>Do you require a meet & greet?</h3>
+          <p>
+            Yes. I want you, your pet and me to be comfortable before your first
+            booking.
+          </p>
+
+          <h3>What does house sitting include?</h3>
+          <p>
+            We'll customize care around your home, pets and normal routine.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Let's talk about your pet.</h2>
+
+          <p>
+            Tell me a little about what you need and I'll get back to you.
+          </p>
+
+          {/* Contact form coming next */}
+        </section>
+      </main>
+
+      <footer>
+        <p>kass.works</p>
+        <p>Pet care • House sitting • London & Middlesex</p>
+        <p>Built by Kass Furtado.</p>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
