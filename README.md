@@ -1,16 +1,58 @@
-# React + Vite
+# kass.works
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tech Stack:** React, JavaScript, Vite, CSS, Git
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+kass.works is a responsive website I'm developing for my independent pet care and house-sitting business in London, Ontario.
 
-## React Compiler
+The project serves as both a business website and an opportunity to apply my frontend development skills to a real-world project, from planning and design through implementation and deployment.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Status:** In active development
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React-based multipage website
+- Reusable navigation and footer components
+- Dedicated service pages
+- Service information and business policies
+- Contact page structure
+
+## Project Structure
+
+The website includes pages for:
+
+- Home
+- Dog Walking
+- Drop-In Visits
+- Pet Sitting
+- House Sitting
+- House Services
+- About
+- Contact
+- Terms
+
+## Development Approach
+
+The application was initialized using Vite and React, with React Router for navigation.
+
+My focus is on building a clean, maintainable website with reusable components and an intuitive experience for prospective clients.
+
+## Future Development
+
+- Complete service descriptions and pricing
+- Refine responsive styling and branding
+- Implement an inquiry/contact solution
+- Add professional photography
+- Deploy the website to its production domain
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Project Context
+
+This is an independently developed project for a business I'm launching. I'm responsible for planning, content, frontend development, and deployment.
