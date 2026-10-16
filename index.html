@@ -7,7 +7,16 @@
     <title>kassworks</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>    
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="service">
+        <option value="Dog Walking">Dog Walking</option>
+      </select>
+      <input type="text" name="dates" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
