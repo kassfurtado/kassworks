@@ -1,60 +1,141 @@
+
 import { Link } from "react-router-dom";
+
+const services = [
+  {
+    number: "01",
+    title: "Dog Walking",
+    description:
+      "A little fresh air, exercise, and one-on-one attention for your pup.",
+  },
+  {
+    number: "02",
+    title: "Drop-In Visits",
+    description:
+      "Feeding, bathroom breaks, playtime, and check-ins while you're away.",
+  },
+  {
+    number: "03",
+    title: "Pet Sitting",
+    description:
+      "Comfortable, familiar care for your pets in their own home.",
+  },
+  {
+    number: "04",
+    title: "House Sitting",
+    description:
+      "Someone you can trust to look after your home while you're away.",
+  },
+];
 
 function Home() {
   return (
-    <>
-      <section id="home">
-        <p>Dog Walking • Pet Sitting • House Sitting</p>
+    <div className="home-page">
 
-        <h1>Pet care you can actually relax about.</h1>
+      {/* HERO */}
+      <section className="home-hero">
+        <div className="hero-content">
+          <p className="eyebrow">
+            PET & HOUSE CARE • LONDON, ONTARIO
+          </p>
 
-        <p>
-          Reliable, thoughtful care for pets and homes in London & Middlesex.
-        </p>
+          <h1>
+            A little peace of mind,
+            <em> while you're away.</em>
+          </h1>
 
-        <Link to="/services">View Services</Link>
-        <Link to="/contact">Get in Touch</Link>
+          <p className="hero-description">
+            Thoughtful, reliable care for your pets
+            and home in London and Middlesex.
+          </p>
+
+          <div className="hero-actions">
+            <Link to="/services" className="btn">
+              Explore Services
+            </Link>
+
+            <Link to="/contact" className="text-link">
+              Get in Touch <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="hero-decoration" aria-hidden="true">
+          <span>kass.works</span>
+          <p>Care that feels personal.</p>
+        </div>
       </section>
 
-      <section className="home-preview">
-        <p>Services</p>
+      {/* SERVICES */}
+      <section className="home-services">
+        <div className="section-heading">
+          <p className="eyebrow">WHAT I OFFER</p>
+          <h2>A helping hand, when you need one.</h2>
+          <p>
+            From daily walks to overnight stays,
+            find the care that works for you.
+          </p>
+        </div>
 
-        <h2>Care that fits your routine.</h2>
+        <div className="service-grid">
+          {services.map((service) => (
+            <Link
+              to="/services"
+              className="service-card"
+              key={service.number}
+            >
+              <span className="service-number">
+                {service.number}
+              </span>
 
-        <p>
-          From walks and drop-ins to pet and house sitting, we'll find the care
-          that works for you and your pet.
-        </p>
+              <h3>{service.title}</h3>
 
-        <Link to="/services">Explore Services →</Link>
+              <p>{service.description}</p>
+
+              <span className="service-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
 
-      <section className="home-preview">
-        <p>About</p>
+      {/* ABOUT PREVIEW */}
+      <section className="home-about">
+        <div>
+          <p className="eyebrow">THE PERSON BEHIND KASS.WORKS</p>
+          <h2>Hi, I'm Kass!</h2>
+        </div>
 
-        <h2>Hi, I'm Kass.</h2>
+        <div>
+          <p>
+            I'm a London local who loves animals,
+            appreciates a well-cared-for home,
+            and believes a little help can go a long way.
+          </p>
 
-        <p>
-          I'm a London-area pet and house sitter who believes good care should
-          make life easier for both pets and their people.
-        </p>
-
-        <Link to="/about">Meet Kass →</Link>
+          <Link to="/about" className="text-link">
+            A Little More About Me <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
       </section>
 
-      <section className="home-preview">
-        <p>Get Started</p>
+      {/* CONTACT CTA */}
+      <section className="home-cta">
+        <p className="eyebrow">LET'S CONNECT</p>
 
-        <h2>Tell me about your pet.</h2>
+        <h2>Need someone to lend a hand?</h2>
 
         <p>
-          Looking for a walker, sitter or someone to care for your home while
-          you're away? Let's see if we're a good fit.
+          Tell me a little about what you're looking for.
+          I'd love to hear from you!
         </p>
 
-        <Link to="/contact">Send an Inquiry →</Link>
+        <Link to="/contact" className="btn">
+          Send an Inquiry
+        </Link>
       </section>
-    </>
+    </div>
   );
 }
 
